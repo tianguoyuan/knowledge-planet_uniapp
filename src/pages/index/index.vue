@@ -23,49 +23,49 @@ const bannerList = ref([
   {
     title: '设计大侦探',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner1'),
   },
 
   {
     title: '三体读者群',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner2'),
   },
 
   {
     title: '雕刻的艺术',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner3'),
   },
 
   {
     title: '希腊神话',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner4'),
   },
 
   {
     title: '这是一个星球',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner5'),
   },
 
   {
     title: '星球学院',
     desc: '廖庆 Joseph',
-    userImg: getImage('userImg'),
+    userImg: getImage('common-user-img'),
     img: getImage('home-banner6'),
   },
 ])
 
-function pageToDetail(title: string) {
+function pageToDetail(title: string, img: string) {
   uni.navigateTo({
-    url: '/pages/index/detail?title=' + title,
+    url: `/pages/index/detail?title=${title}&img=${img}`,
   })
 }
 </script>
@@ -89,11 +89,11 @@ function pageToDetail(title: string) {
           v-for="(item, index) in [...bannerList, ...bannerList]"
           :key="index"
           class="overflow-hidden rounded-2 bg-#F5F6F6"
-          @click="pageToDetail(item.title)"
+          @click="pageToDetail(item.title, item.img)"
         >
           <image class="h-40 w-full" mode="aspectFill" :src="item.img" />
           <view class="p-2">
-            <view class="color-#313131 text-4.25">{{ item.title + index }}</view>
+            <view class="color-#313131 text-4.25">{{ item.title + (index + 1) }}</view>
             <view class="flex justify-between mt-0.5 color-#7A7B7B">
               <view>{{ item.desc }}</view>
               <image :src="item.userImg" class="w-4 h-4" />

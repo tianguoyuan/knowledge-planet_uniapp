@@ -5,28 +5,48 @@
 
 // SVG 图标资源导入 - 从 static/icons 目录导入
 import PLATFORM from './platform'
-const imageNames = [
-  // Tabbar 图标
-  'home',
-  'homeActive',
-  'discover',
-  'discoverActive',
-  'dynamic',
-  'dynamicActive',
-  'user',
-  'userActive',
 
-  // home
+const commonNames = [
+  'common-arrow-right',
+  'common-user-img',
+  'common-filter',
+  'common-filter',
+  'common-arrow-right-fill',
+  'common-book',
+  'common-homework',
+  'common-clock-in',
+] as const
+const homeNames = [
   'home-banner1',
   'home-banner2',
   'home-banner3',
   'home-banner4',
   'home-banner5',
   'home-banner6',
-  'userImg',
 
   // home-detail
-  'index-detail-cover',
+  'home-detail-top-user',
+] as const
+
+const discover = [] as const
+const dynamic = [] as const
+const user = [] as const
+const imageNames = [
+  // Tabbar 图标
+  'tabbar-home',
+  'tabbar-home-active',
+  'tabbar-discover',
+  'tabbar-discover-active',
+  'tabbar-dynamic',
+  'tabbar-dynamic-active',
+  'tabbar-user',
+  'tabbar-user-active',
+
+  ...commonNames,
+  ...homeNames,
+  ...discover,
+  ...dynamic,
+  ...user,
 ] as const
 
 const isHttpImage = PLATFORM.isMp

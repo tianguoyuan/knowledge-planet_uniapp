@@ -11,26 +11,26 @@ const tabbarStore = useTabbarStore()
 const tabbarList = [
   {
     title: '星球',
-    icon: getImage('home'),
-    activeIcon: getImage('homeActive'),
+    icon: getImage('tabbar-home'),
+    activeIcon: getImage('tabbar-home-active'),
     path: '/pages/index/index',
   },
   {
     title: '动态',
-    icon: getImage('dynamic'),
-    activeIcon: getImage('dynamicActive'),
+    icon: getImage('tabbar-dynamic'),
+    activeIcon: getImage('tabbar-dynamic-active'),
     path: '/pages/dynamic/dynamic',
   },
   {
     title: '发现',
-    icon: getImage('discover'),
-    activeIcon: getImage('discoverActive'),
+    icon: getImage('tabbar-discover'),
+    activeIcon: getImage('tabbar-discover-active'),
     path: '/pages/discover/discover',
   },
   {
     title: '我',
-    icon: getImage('user'),
-    activeIcon: getImage('userActive'),
+    icon: getImage('tabbar-user'),
+    activeIcon: getImage('tabbar-user-active'),
     path: '/pages/user/user',
   },
 ] as const
