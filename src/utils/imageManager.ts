@@ -9,14 +9,24 @@ const imageNames = [
   // Tabbar 图标
   'home',
   'homeActive',
-  'market',
-  'marketActive',
+  'discover',
+  'discoverActive',
+  'dynamic',
+  'dynamicActive',
   'user',
   'userActive',
-  'order',
-  'orderActive',
-  'goldCoupon',
-  'goldCouponActive',
+
+  // home
+  'home-banner1',
+  'home-banner2',
+  'home-banner3',
+  'home-banner4',
+  'home-banner5',
+  'home-banner6',
+  'userImg',
+
+  // home-detail
+  'index-detail-cover',
 ] as const
 
 const isHttpImage = PLATFORM.isMp

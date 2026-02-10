@@ -33,9 +33,8 @@ export default defineUniPages({
     spacing: '3px',
     list: [
       { pagePath: 'pages/index/index' },
-      { pagePath: 'pages/order/order' },
-      { pagePath: 'pages/market/market' },
-      { pagePath: 'pages/goldCoupon/goldCoupon' },
+      { pagePath: 'pages/dynamic/dynamic' },
+      { pagePath: 'pages/discover/discover' },
       { pagePath: 'pages/user/user' },
     ],
   },

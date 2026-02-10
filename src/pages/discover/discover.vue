@@ -3,8 +3,8 @@ import Tabbar from '@/components/Tabbar.vue'
 </script>
 
 <template>
-  <view class="">
-    <Tabbar tabbar-path="/pages/goldCoupon/goldCoupon" />
+  <view>
+    <Tabbar tabbar-path="/pages/discover/discover" />
   </view>
 </template>
 
@@ -16,7 +16,7 @@ import Tabbar from '@/components/Tabbar.vue'
 {
   layout: 'default',
   style: {
-    navigationBarTitleText: '金喜卡',
+    navigationBarTitleText: '发现',
     navigationStyle: 'custom',
   },
 }

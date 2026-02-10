@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import Tabbar from '@/components/Tabbar.vue'
-import { getImage } from '@/utils/imageManager'
 </script>
 
 <template>
-  <view class="">
-    <Tabbar tabbar-path="/pages/market/market" />
+  <view>
+    <Tabbar tabbar-path="/pages/dynamic/dynamic" />
   </view>
 </template>
 
@@ -17,7 +16,7 @@ import { getImage } from '@/utils/imageManager'
 {
   layout: 'default',
   style: {
-    navigationBarTitleText: '百货',
+    navigationBarTitleText: '动态',
     navigationStyle: 'custom',
   },
 }

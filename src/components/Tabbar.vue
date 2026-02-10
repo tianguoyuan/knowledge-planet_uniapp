@@ -10,31 +10,25 @@ const tabbarStore = useTabbarStore()
 
 const tabbarList = [
   {
-    title: '首页',
+    title: '星球',
     icon: getImage('home'),
     activeIcon: getImage('homeActive'),
     path: '/pages/index/index',
   },
   {
-    title: '点单',
-    icon: getImage('order'),
-    activeIcon: getImage('orderActive'),
-    path: '/pages/order/order',
+    title: '动态',
+    icon: getImage('dynamic'),
+    activeIcon: getImage('dynamicActive'),
+    path: '/pages/dynamic/dynamic',
   },
   {
-    title: '百货',
-    icon: getImage('market'),
-    activeIcon: getImage('marketActive'),
-    path: '/pages/market/market',
+    title: '发现',
+    icon: getImage('discover'),
+    activeIcon: getImage('discoverActive'),
+    path: '/pages/discover/discover',
   },
   {
-    title: '金喜卡',
-    icon: getImage('goldCoupon'),
-    activeIcon: getImage('goldCouponActive'),
-    path: '/pages/goldCoupon/goldCoupon',
-  },
-  {
-    title: '我的',
+    title: '我',
     icon: getImage('user'),
     activeIcon: getImage('userActive'),
     path: '/pages/user/user',
@@ -72,7 +66,8 @@ function pageTo(index: number) {
     :model-value="tabbarStore.tabbarIndex"
     fixed
     :bg-color="StyleEnum.MAIN_COLOR"
-    active-color="#000"
+    :active-color="StyleEnum.TAB_BAR_ACTIVE_COLOR"
+    :inactive-color="StyleEnum.TAB_BAR_COLOR"
     safe-area-inset-bottom
     :top-shadow="props.topShadow"
     placeholder
@@ -95,7 +90,7 @@ function pageTo(index: number) {
         </view>
 
         <view v-else class="flex-1 flex items-start">
-          <image :src="item.icon" class="w-9 h-9 mt-1" />
+          <image :src="(item as { icon: string }).icon" class="w-9 h-9 mt-1" />
         </view>
       </template>
     </TnTabbarItem>

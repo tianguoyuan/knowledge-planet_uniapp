@@ -5,9 +5,9 @@
 
 interface NavigateToOptions {
   url: "/pages/index/index" |
-       "/pages/goldCoupon/goldCoupon" |
-       "/pages/market/market" |
-       "/pages/order/order" |
+       "/pages/discover/discover" |
+       "/pages/dynamic/dynamic" |
+       "/pages/index/detail" |
        "/pages/user/user" |
        "/pagesA/demo/demo" |
        "/pagesA/webview/webview";
@@ -15,7 +15,7 @@ interface NavigateToOptions {
 interface RedirectToOptions extends NavigateToOptions {}
 
 interface SwitchTabOptions {
-  url: "/pages/index/index" | "/pages/order/order" | "/pages/market/market" | "/pages/goldCoupon/goldCoupon" | "/pages/user/user"
+  url: "/pages/index/index" | "/pages/dynamic/dynamic" | "/pages/discover/discover" | "/pages/user/user"
 }
 
 type ReLaunchOptions = NavigateToOptions | SwitchTabOptions;
