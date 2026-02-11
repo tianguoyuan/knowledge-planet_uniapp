@@ -24,6 +24,7 @@ const commonNames = [
   'common-massage',
   'common-share',
   'common-star',
+  'common-bell',
 ] as const
 const homeNames = [
   'home-banner1',
@@ -41,8 +42,15 @@ const homeNames = [
   'home-detail-clock-in',
 ] as const
 
+const dynamic = [
+  'dynamic-list-1',
+  'dynamic-list-2',
+  'dynamic-list-3',
+  'dynamic-list-4',
+  'dynamic-list-5',
+  'dynamic-list-6',
+] as const
 const discover = [] as const
-const dynamic = [] as const
 const user = [] as const
 const imageNames = [
   // Tabbar 图标
