@@ -89,7 +89,7 @@ const dynamicListData = ref([
   layout: 'default',
   style: {
     navigationBarTitleText: '动态',
-    navigationStyle: 'custom',
+    navigationStyle: 'default',
   },
 }
 </route>
