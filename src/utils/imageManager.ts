@@ -9,12 +9,21 @@ import PLATFORM from './platform'
 const commonNames = [
   'common-arrow-right',
   'common-user-img',
+  'common-user-img2',
+  'common-user-img3',
+  'common-user-img4',
   'common-filter',
   'common-filter',
   'common-arrow-right-fill',
   'common-book',
   'common-homework',
   'common-clock-in',
+  'common-file-ppt',
+  'common-arrow-bottom-fill-gray',
+
+  'common-massage',
+  'common-share',
+  'common-star',
 ] as const
 const homeNames = [
   'home-banner1',
@@ -26,6 +35,10 @@ const homeNames = [
 
   // home-detail
   'home-detail-top-user',
+  'home-detail-list-1',
+  'home-detail-list-2',
+  'home-detail-list-3',
+  'home-detail-clock-in',
 ] as const
 
 const discover = [] as const

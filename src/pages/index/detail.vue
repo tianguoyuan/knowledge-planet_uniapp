@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Navbar from '@/components/Navbar.vue'
 import { getImage } from '@/utils/imageManager'
+import CardList from './components/CardList.vue'
 
 const props = defineProps<{
   title: string
@@ -23,6 +24,36 @@ const filterList = ref([
 function handleFilterItem(item: (typeof filterList.value)[0]) {
   filterList.value.forEach((v) => (v.active = v.value === item.value))
 }
+
+const listData = ref([
+  {
+    userImg: getImage('common-user-img4'),
+    username: '廖庆 Joseph',
+    createTime: '2022/5/10 14:14',
+    readNum: '1',
+    desc: '纯享版-想阅读致敬！微信读书产品设计策略微信读书产品设计策略…',
+    fileList: [
+      {
+        imgUrl: getImage('common-file-ppt'),
+        title: '第二学期第37期…习(皇皇).pptx',
+      },
+    ],
+    imgList: [
+      {
+        url: getImage('home-detail-list-1'),
+      },
+      {
+        url: getImage('home-detail-list-2'),
+      },
+      {
+        url: getImage('home-detail-list-3'),
+      },
+    ],
+    dayFlag: '7天临摹设计挑战',
+    starNum: '12',
+    msgNum: '1',
+  },
+])
 </script>
 
 <template>
@@ -109,8 +140,14 @@ function handleFilterItem(item: (typeof filterList.value)[0]) {
             <image :src="getImage('common-arrow-right-fill')" class="w-3 h-3" />
           </view>
         </view>
+        <view class="mt-3">
+          <CardList :listData="[...listData, ...listData]" />
+        </view>
       </view>
     </view>
+
+    <!-- 占位 底部留白 -->
+    <view class="h-12.5"></view>
   </view>
 </template>
 

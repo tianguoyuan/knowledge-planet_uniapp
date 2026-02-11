@@ -20,8 +20,8 @@ export const http = <T>(options: CustomRequestOptions) => {
         const userStore = useUserStore()
 
         const result = res.data as IResData<T>
-        const code = result[HttpEnum.RESPONSE_CODE_FIELD] + ''
-        const msg = result[HttpEnum.RESPONSE_MSG_FIELD]
+        const code = (result as any as Record<string, string>)[HttpEnum.RESPONSE_CODE_FIELD] + ''
+        const msg = (result as any as Record<string, string>)[HttpEnum.RESPONSE_MSG_FIELD]
 
         if (HttpEnum.SUCCESS_CODE_ARR.includes(code)) {
           resolve(result)
