@@ -17,7 +17,7 @@ import Tabbar from '@/components/Tabbar.vue'
   layout: 'default',
   style: {
     navigationBarTitleText: '发现',
-    navigationStyle: 'custom',
+    navigationStyle: '',
   },
 }
 </route>

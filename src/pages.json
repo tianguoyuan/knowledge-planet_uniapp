@@ -54,7 +54,7 @@
       "layout": "default",
       "style": {
         "navigationBarTitleText": "发现",
-        "navigationStyle": "custom"
+        "navigationStyle": ""
       }
     },
     {

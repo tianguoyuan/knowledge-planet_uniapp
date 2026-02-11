@@ -6,7 +6,7 @@ import DynamicList from './components/DynamicList.vue'
 
 const systemListData = ref([
   {
-    userImg: getImage('common-bell'),
+    userImg: getImage('common-bell-active'),
     title: '系统消息',
     desc: '您好，欢迎加入「云端书馆」，希望大家…',
     createTime: '昨天 23:50',

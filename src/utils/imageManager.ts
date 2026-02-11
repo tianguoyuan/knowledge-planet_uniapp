@@ -20,11 +20,14 @@ const commonNames = [
   'common-clock-in',
   'common-file-ppt',
   'common-arrow-bottom-fill-gray',
+  'common-arrow-right-gray',
 
   'common-massage',
   'common-share',
   'common-star',
+  'common-bell-active',
   'common-bell',
+  'common-book-active',
 ] as const
 const homeNames = [
   'home-banner1',
@@ -51,7 +54,7 @@ const dynamic = [
   'dynamic-list-6',
 ] as const
 const discover = [] as const
-const user = [] as const
+const user = ['user-user-img'] as const
 const imageNames = [
   // Tabbar 图标
   'tabbar-home',
