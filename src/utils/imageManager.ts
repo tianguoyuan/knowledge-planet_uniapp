@@ -21,6 +21,8 @@ const commonNames = [
   'common-file-ppt',
   'common-arrow-bottom-fill-gray',
   'common-arrow-right-gray',
+  'common-arrow-right-blue',
+  'common-refresh-blue',
 
   'common-massage',
   'common-share',
@@ -53,7 +55,24 @@ const dynamic = [
   'dynamic-list-5',
   'dynamic-list-6',
 ] as const
-const discover = [] as const
+
+const discover = [
+  'discover_interestList_1',
+  'discover_interestList_2',
+  'discover_interestList_3',
+
+  'discover_ad1',
+
+  'discover_themeList_1',
+  'discover_themeList_2',
+  'discover_themeList_3',
+
+  'discover_filterList_1',
+  'discover_filterList_2',
+  'discover_filterList_3',
+  'discover_filterList_4',
+] as const
+
 const user = ['user-user-img'] as const
 const imageNames = [
   // Tabbar 图标
