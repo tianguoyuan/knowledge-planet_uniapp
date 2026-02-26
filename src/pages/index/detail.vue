@@ -86,17 +86,20 @@ const listData = ref([
           试运营星球最多可加入50人，点击申请升级
         </view>
 
+        <!-- filter-menu -->
         <view class="mt-4 flex items-center">
-          <view
-            v-for="(item, index) in filterList"
-            :key="index"
-            class="mr-2.5 h-7.5 px-3 text-3.5 flex items-center"
-            :class="[item.active ? 'color-#fff bg-#4D4D4D' : 'color-#7A7B7B bg-#F5F6F6']"
-            @click="handleFilterItem(item)"
-          >
-            {{ item.title }}
+          <view class="flex items-center overflow-auto mr-3">
+            <view
+              v-for="(item, index) in filterList"
+              :key="index"
+              class="mr-2.5 h-7.5 px-3 text-3.5 flex items-center flex-shrink-0"
+              :class="[item.active ? 'color-#fff bg-#4D4D4D' : 'color-#7A7B7B bg-#F5F6F6']"
+              @click="handleFilterItem(item)"
+            >
+              {{ item.title }}
+            </view>
           </view>
-          <image class="w-4 h-4" :src="getImage('common-filter')" />
+          <image class="w-4 h-4 bg-#fff" :src="getImage('common-filter')" />
         </view>
 
         <view class="h-1px bg-#F7F7F7 mt-3"></view>
