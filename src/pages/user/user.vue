@@ -3,6 +3,7 @@ import Tabbar from '@/components/Tabbar.vue'
 import { getImage } from '@/utils/imageManager'
 import UserList from './components/UserList.vue'
 import Navbar from '@/components/Navbar.vue'
+import { useTabbarStore } from '@/store/tabbar'
 
 const list = ref([
   {
@@ -38,6 +39,15 @@ const listOther = ref([
     rightImg: getImage('common-arrow-right-gray'),
   },
 ])
+
+const tabbarStore = useTabbarStore()
+
+function changeUserMessage() {
+  tabbarStore.changeTabbarMessageCount(
+    '/pages/user/user',
+    (tabbarStore.tabbarList.find((v) => v.path === '/pages/user/user')?.messageCount || 0) + 1,
+  )
+}
 </script>
 
 <template>
@@ -48,7 +58,7 @@ const listOther = ref([
         <image :src="getImage('common-book-active')" class="h-5 w-5" />
         <view class="ml-0.5 color-#55B396 line-height-5">阅读数据</view>
       </view>
-      <view>
+      <view @click="changeUserMessage">
         <image :src="getImage('common-bell')" class="w-5 h-5 ml-2" />
       </view>
     </view>
@@ -88,9 +98,9 @@ const listOther = ref([
     </view>
 
     <view class="h-3 bg-#F3F7F8"></view>
-    <UserList :list="list" class="bg-#fff" />
+    <UserList :list="list" />
     <view class="h-3 bg-#F3F7F8"></view>
-    <UserList :list="listOther" class="bg-#fff" />
+    <UserList :list="listOther" />
 
     <Tabbar tabbar-path="/pages/user/user" />
   </view>
