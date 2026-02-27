@@ -93,7 +93,7 @@ const imageNames = [
 ] as const
 
 const isHttpImage = PLATFORM.isMp
-const imageBaseUrl = 'https://het-tea-uniapp.netlify.app'
+const imageBaseUrl = 'https://knowledge-planet-uniapp.netlify.app'
 /**
  * 图片名称类型
  */
