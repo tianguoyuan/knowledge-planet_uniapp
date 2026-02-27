@@ -11,7 +11,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <view class="">
+  <view class="bg-#fff">
     <view
       class="py-4 pl-7 pr-5 flex justify-between"
       v-for="(item, index) in props.list"

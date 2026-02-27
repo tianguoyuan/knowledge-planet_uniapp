@@ -155,7 +155,7 @@ const filterList = ref([
       </view>
 
       <view class="mt-5">
-        <view class="p-4 bg-#3F3F3F rounded-2">
+        <view class="p-4 bg-#3F3F3F rounded-t-2">
           <view class="font-600 text-4 color-#FFFFFF">星球财富周榜</view>
           <view class="text-3 mt-1 color-#B2B2B2">每小时更新一次丨查看完整榜单</view>
         </view>
@@ -214,7 +214,7 @@ const filterList = ref([
   layout: 'default',
   style: {
     navigationBarTitleText: '发现',
-    navigationStyle: '',
+    navigationStyle: 'default',
   },
 }
 </route>

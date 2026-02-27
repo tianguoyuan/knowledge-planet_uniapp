@@ -2,19 +2,10 @@
 import PLATFORM from '@/utils/platform'
 import Tabbar from '@/components/Tabbar.vue'
 import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
-import { TnInput } from '@tuniao/tnui-vue3-uniapp'
+import TnInput from '@tuniao/tnui-vue3-uniapp/components/input/src/input.vue'
 import { getImage } from '@/utils/imageManager'
 //
 onLoad(() => PLATFORM.isApp && uni.hideTabBar())
-
-const { navBarInfo } = useUniAppSystemRectInfo()
-
-// 打开喜卡页面
-function pageToDemo() {
-  uni.navigateTo({
-    url: '/pagesA/demo/demo',
-  })
-}
 
 const form = ref({
   search: '',
@@ -72,10 +63,8 @@ function pageToDetail(title: string, img: string) {
 
 <template>
   <view class="overflow-hidden">
-    <view :style="{ height: navBarInfo.statusHeight + 'px' }" class="bg-#6ff6f6"></view>
-
     <view class="p-5 pt-0">
-      <view class="h-10 bg-#F5F6F6 flex items-center px-2">
+      <view class="h-10 bg-#F5F6F6 px-2">
         <TnInput
           v-model="form.search"
           placeholder="搜索星球、用户或内容"
