@@ -78,6 +78,10 @@ const filterList = ref([
     image: getImage('discover_filterList_4'),
   },
 ])
+
+function pageToProblem() {
+  uni.navigateTo({ url: '/pages/discover/problem' })
+}
 </script>
 
 <template>
@@ -85,7 +89,7 @@ const filterList = ref([
     <view class="px-5">
       <view class="mt-3 flex items-center justify-between">
         <view class="text-4">热点问题 · 星空问答</view>
-        <view class="flex items-center">
+        <view class="flex items-center hasClickBox" @click="pageToProblem">
           <view class="text-3 color-#17B99A">查看更多</view>
           <image :src="getImage('common-arrow-right-blue')" class="w-2.5 h-2.5" />
         </view>

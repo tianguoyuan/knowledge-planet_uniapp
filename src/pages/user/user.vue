@@ -58,8 +58,8 @@ function changeUserMessage() {
         <image :src="getImage('common-book-active')" class="h-5 w-5" />
         <view class="ml-0.5 color-#55B396 line-height-5">阅读数据</view>
       </view>
-      <view @click="changeUserMessage">
-        <image :src="getImage('common-bell')" class="w-5 h-5 ml-2" />
+      <view @click="changeUserMessage" class="hasClickBox ml-2">
+        <image :src="getImage('common-bell')" class="w-5 h-5" />
       </view>
     </view>
 

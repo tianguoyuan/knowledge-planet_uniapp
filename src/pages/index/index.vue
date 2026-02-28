@@ -78,6 +78,7 @@ function pageToDetail(title: string, img: string) {
           v-for="(item, index) in [...bannerList, ...bannerList]"
           :key="index"
           class="overflow-hidden rounded-2 bg-#F5F6F6"
+          :class="[index === 0 ? 'hasClickBox' : '']"
           @click="pageToDetail(item.title, item.img)"
         >
           <image class="h-40 w-full" mode="aspectFill" :src="item.img" />

@@ -30,6 +30,15 @@ const commonNames = [
   'common-bell-active',
   'common-bell',
   'common-book-active',
+
+  'common-fire',
+  'common-like-gray',
+  'common-message-gray',
+
+  'common-follow-blue',
+  'common-share-blue',
+
+  'common-more-gray',
 ] as const
 const homeNames = [
   'home-banner1',

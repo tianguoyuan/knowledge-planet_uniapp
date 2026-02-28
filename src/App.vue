@@ -5,13 +5,21 @@ import { navigateToInterceptor } from './interceptors/route'
 import { useAppStore } from './store/app'
 
 const appStore = useAppStore()
-onLaunch((options) => {
-  console.log('App Launch', options)
-  // 首次进入判断页面是否需要登录
+
+function setAppInfo(options: { path: string }) {
   navigateToInterceptor.invoke({ url: '/' + options.path })
   const windowInfo = uni.getWindowInfo()
   console.log('屏幕高度：', windowInfo.screenHeight)
   appStore.changeSystemScreenHeight(windowInfo.screenHeight)
+}
+onLaunch((options) => {
+  console.log('App Launch', options)
+  // 首次进入判断页面是否需要登录
+  if (!options) return
+  setAppInfo(options)
+  // #ifndef MP
+  window.addEventListener('resize', () => setAppInfo(options))
+  // #endif
 })
 onReady(() => {})
 onShow(() => {

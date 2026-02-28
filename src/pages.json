@@ -58,6 +58,24 @@
       }
     },
     {
+      "path": "pages/discover/problem",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "default",
+        "navigationBarTitleText": "星空问答"
+      }
+    },
+    {
+      "path": "pages/discover/problemDetail",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "default",
+        "navigationBarTitleText": "星空问答"
+      }
+    },
+    {
       "path": "pages/dynamic/dynamic",
       "type": "page",
       "layout": "default",
