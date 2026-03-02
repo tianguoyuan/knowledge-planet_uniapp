@@ -118,9 +118,8 @@ export default defineManifestConfig({
       es6: true,
       enhance: true,
       swc: true,
-
       urlCheck: true,
-      autoAudits: true,
+      autoAudits: false,
       postcss: true,
       minified: true,
       minifyWXSS: true,
