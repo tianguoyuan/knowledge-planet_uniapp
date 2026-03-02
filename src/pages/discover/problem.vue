@@ -104,7 +104,7 @@ function pageToDetail(id: string, title: string) {
     </view>
 
     <view
-      class="mt-3 bg-#FEFFFF py-5 px-4"
+      class="mt-3 bg-#FEFFFF py-5 px-4 rounded-2"
       :class="[index === 0 ? 'hasClickBox' : '']"
       v-for="(item, index) in problemList"
       :key="index"
