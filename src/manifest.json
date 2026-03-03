@@ -89,7 +89,7 @@
       "es6": true,
       "enhance": true,
       "swc": true,
-      "autoAudits": true,
+      "autoAudits": false,
       "postcss": true,
       "minified": true,
       "minifyWXSS": true,
