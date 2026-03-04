@@ -36,5 +36,21 @@ onHide(() => {
 .uni-tabbar-bottom {
   display: none;
 }
+page {
+  position: relative;
+  max-width: 750px; /* 设计稿宽度 */
+  margin: 0 auto;
+}
+.tn-navbar,
+.tn-tabbar {
+  right: 0;
+  left: 0;
+  max-width: 750px; /* 设计稿宽度 */
+  margin: auto;
+}
+html,
+body {
+  background: #efefef;
+}
 // #endif
 </style>
