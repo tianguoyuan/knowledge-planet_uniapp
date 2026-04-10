@@ -87,7 +87,7 @@ function pageToProblem() {
 <template>
   <view>
     <view class="px-5">
-      <view class="mt-3 flex items-center justify-between">
+      <view class="pt-3 flex items-center justify-between">
         <view class="text-4">热点问题 · 星空问答</view>
         <view class="flex items-center hasClickBox" @click="pageToProblem">
           <view class="text-3 color-#17B99A">查看更多</view>
@@ -187,7 +187,7 @@ function pageToProblem() {
       </view>
 
       <view class="mt-3">
-        <view class="py-4 flex items-center" v-for="(item, index) in filterList" :key="index">
+        <view v-for="(item, index) in filterList" :key="index" class="py-4 flex items-center">
           <image
             class="w-13.5 h-13.5 flex-shrink-0 rounded-1"
             mode="aspectFill"

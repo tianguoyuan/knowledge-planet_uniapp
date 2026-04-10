@@ -36,21 +36,41 @@ onHide(() => {
 .uni-tabbar-bottom {
   display: none;
 }
-page {
-  position: relative;
-  max-width: 750px; /* 设计稿宽度 */
-  margin: 0 auto;
+$appMaxWidth: 500px;
+// 大于$appMaxWidth
+@media (min-width: $appMaxWidth) {
+  page {
+    position: relative;
+    max-width: $appMaxWidth; /* 设计稿宽度 */
+    min-height: 100%;
+    margin: 0 auto;
+    background: #fff;
+  }
+  .tn-navbar,
+  .tn-tabbar {
+    right: 0;
+    left: 0;
+    max-width: $appMaxWidth; /* 设计稿宽度 */
+    margin: auto;
+  }
+  .uni-page-head {
+    width: $appMaxWidth;
+    margin: auto;
+  }
+  html {
+    font-size: 20px !important;
+  }
+  html,
+  body {
+    overflow: auto;
+    background: #ddd;
+  }
 }
-.tn-navbar,
-.tn-tabbar {
-  right: 0;
-  left: 0;
-  max-width: 750px; /* 设计稿宽度 */
-  margin: auto;
-}
-html,
-body {
-  background: #efefef;
+// 小于300px
+@media (max-width: 300px) {
+  html {
+    font-size: 12px !important;
+  }
 }
 // #endif
 </style>

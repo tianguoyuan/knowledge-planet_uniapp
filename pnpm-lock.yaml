@@ -138,6 +138,9 @@ importers:
       '@types/node':
         specifier: ^20.17.9
         version: 20.17.32
+      '@types/qs':
+        specifier: ^6.15.0
+        version: 6.15.0
       '@types/throttle-debounce':
         specifier: ^5.0.2
         version: 5.0.2
@@ -2398,6 +2401,9 @@ packages:
 
   '@types/prettier@2.7.3':
     resolution: {integrity: sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==}
+
+  '@types/qs@6.15.0':
+    resolution: {integrity: sha512-JawvT8iBVWpzTrz3EGw9BTQFg3BQNmwERdKE22vlTxawwtbyUSlMppvZYKLZzB5zgACXdXxbD3m1bXaMqP/9ow==}
 
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
@@ -11040,6 +11046,8 @@ snapshots:
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/prettier@2.7.3': {}
+
+  '@types/qs@6.15.0': {}
 
   '@types/responselike@1.0.3':
     dependencies:
